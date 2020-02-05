@@ -1,0 +1,1 @@
+this directory conten examples of bash script and files.
