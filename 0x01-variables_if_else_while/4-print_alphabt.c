@@ -14,9 +14,8 @@ for (; g <= 'z'; g++)
 if (g == 'e' || g == 'q')
 {
 continue;
-}	
-putchar(g);	
-		
+}
+putchar(g);
 }
 putchar('\n');
 return (0);
