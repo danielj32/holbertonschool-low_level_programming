@@ -22,8 +22,10 @@ int main(void)
 	putchar(vari2);
 	putchar(vari3);
 	if (vari1 != '7' || vari2 != '8' || vari3 != '9')
+	{
 	putchar(',');
 putchar(' ');
+	}
 	}
 	}
 	}
