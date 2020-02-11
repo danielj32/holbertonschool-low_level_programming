@@ -2,7 +2,7 @@
 /**
  *_islower - print the lowercase character.
  *@c: integer
- *return: 1 or 0
+ *Return: 1 or 0
  */
 int _islower(int c)
 {
