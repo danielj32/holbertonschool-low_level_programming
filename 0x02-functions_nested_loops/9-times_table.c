@@ -9,7 +9,7 @@ void times_table(void)
 int r = 0;
 int q;
 int v;
-int z = 0;
+
 
 	while (r < 10)
 	{
@@ -19,7 +19,7 @@ int z = 0;
 		{
 		v = r * q;
 
-			if (z > 9)
+			if (v > 9)
 			{
 			_putchar(v / 10 + '0');
 			_putchar(v % 10 + '0');
@@ -33,7 +33,7 @@ int z = 0;
 					{
 					_putchar(v + '0');
 					}
-		else if (q != 9)
+		if (q != 9)
 		{
 		_putchar(',');
 		_putchar(' ');
