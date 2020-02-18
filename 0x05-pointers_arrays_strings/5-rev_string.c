@@ -6,21 +6,21 @@
 
 void rev_string(char *s)
 {
-	int length, c;
-char *begin, *end, temp;
-	length = _strlen(s);
-	begin  = s;
-	end = s;
+	int leg, cd;
+char *beg, *ed, tmp;
+	leg = _strlen(s);
+	beg  = s;
+	ed = s;
 
-	for (c = 0; c < length - 1; c++)
-		end++;
-	for (c = 0; c < length / 2; c++)
+	for (cd = 0; cd < leg - 1; cd++)
+		ed++;
+	for (cd = 0; cd < leg / 2; cd++)
 	{
-		temp   = *end;
-		*end   = *begin;
-		*begin = temp;
-		begin++;
-		end--;
+		tmp   = *ed;
+		*ed   = *beg;
+		*beg = tmp;
+		beg++;
+		ed--;
 	}
 }
 
@@ -32,9 +32,12 @@ char *begin, *end, temp;
 
 int _strlen(char *s)
 {
-	int c = 0;
+	int ct = 0;
 
-	while (*(s + c) != '\0')
-		c++;
-	return (c);
+	while (*s != '\0')
+	{
+		ct++;
+		s++;
+	}
+	return (ct);
 }
