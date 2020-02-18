@@ -10,7 +10,7 @@ void puts2(char *str);
 void puts2(char *str)
 {
 	int ct;
-	char s[32] = " ";
+	char s[64] = " ";
 
 		for (ct = 0; ct < _strlen(str); ct += 2)
 		{
