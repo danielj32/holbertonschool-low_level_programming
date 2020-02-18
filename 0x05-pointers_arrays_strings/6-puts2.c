@@ -10,11 +10,11 @@ void puts2(char *str);
 void puts2(char *str)
 {
 	int ct;
-	 char s[32];
+	 char s[32] = " ";
 
 	for (ct = 0; ct < _strlen(str); ct += 2)
 	{
-		_putchar(s[20]);
+		_putchar(s[10]);
 		_putchar(str[ct]);
 		s[ct / 2] = str[ct];
 	}
