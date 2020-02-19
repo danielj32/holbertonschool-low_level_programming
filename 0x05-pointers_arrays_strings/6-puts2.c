@@ -14,9 +14,12 @@ void puts2(char *str)
 
 		for (ct = 0; ct < _strlen(str); ct += 2)
 		{
-			_putchar(s[10]);
-			_putchar(str[ct]);
-			s[ct / 2] = str[ct];
+			if (ct % 2 == '\0')
+			{
+				_putchar(s[10]);
+				_putchar(str[ct]);
+				s[ct / 2] = str[ct];
+			}
 		}
 		_putchar(10);
 
