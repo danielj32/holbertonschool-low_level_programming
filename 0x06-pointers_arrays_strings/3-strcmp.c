@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
-  *_strcmp - compares two strings
-  *@s1: pointer char 1
-  *@s2: pointer char 2
-  *Return: the values comparative
+  *_strcmp - compares two strings.
+  *@s1: pointer char 1.
+  *@s2: pointer char 2.
+  *Return: the values comparatives.
   */
 int _strcmp(char *s1, char *s2)
 {
