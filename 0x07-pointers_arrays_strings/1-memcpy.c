@@ -6,11 +6,16 @@
  *@n: integer of bytes
  *Return: dest
  */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int ct;
+	int j = 0;
 
 	for (ct = 0; ct < n; ct++)
-		src[n] = dest[n];
+	{
+		dest[j] = src[ct];
+		j++;
+	}
 	return (dest);
 }
