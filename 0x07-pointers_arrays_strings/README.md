@@ -1,0 +1,1 @@
+This directory contents exercises about the pointers, arrays and double pointers an then multidimensional arrays.
