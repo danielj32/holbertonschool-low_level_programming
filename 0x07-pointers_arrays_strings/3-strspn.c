@@ -8,24 +8,15 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0;
+	unsigned int j;
+	unsigned int i;
 
-	while (*s != 0 &&  _strchr(accept, *s++))
-		i++;
-	return (i);
-}
-
-/**
- *_strchr - locates a character in a string.
- *@s: pointer of the string.
- *@c: char datatype.
- *Return: null first occurrence of c or NULL.
- */
-
-char *_strchr(char *s, char c)
-{
-	while (*s != c)
-		if (!*s++)
-			return (0);
-	return (s);
+	for (j = 0; s[j] != '\0'; j++)
+		{
+			for (i = 0; accept[i] != '\0'; i++)
+				{
+					accept [i] = s[j];
+				}
+		}
+			return (accept);
 }
