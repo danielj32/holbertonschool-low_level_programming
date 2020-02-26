@@ -2,7 +2,7 @@
 /**
  *factorial - prints a string, in reverse.
  *@n: pointer to the string.
- *Return:
+ *Return: 0
  */
 
 int factorial(int n)
