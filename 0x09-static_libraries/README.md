@@ -1,0 +1,1 @@
+This directory it's about how create a static library and how to use in c.
