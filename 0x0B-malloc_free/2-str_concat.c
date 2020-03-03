@@ -30,6 +30,9 @@ char *str_concat(char *s1, char *s2)
 	c++;
 	pt = malloc(sizeof(char) * (c + e));
 
+	if (pt == NULL)
+		return (NULL);
+
 	for (e = 0; s1[e]; e++)
 	{
 		pt[d] = s1[e];
