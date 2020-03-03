@@ -21,6 +21,10 @@ char *create_array(unsigned int size, char c)
 		}
 			st[k] = c;
 	}
+	if (size == 0)
+	{
+		return (NULL);
+	}
 		return (st);
 		free(st);
 }
