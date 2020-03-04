@@ -14,10 +14,10 @@ char *str_concat(char *s1, char *s2)
 	char *pt;
 
 	if (s1 == NULL)
-		return (NULL);
+	s1 =  "";
 
 	else if (s2 == NULL)
-		return (NULL);
+	s2 = "";
 
 	for (c = 0; s1[c]; c++)
 	{
