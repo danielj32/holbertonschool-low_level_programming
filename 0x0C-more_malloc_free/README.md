@@ -1,0 +1,1 @@
+The directory contains examples of how to use malloc, free and exit. with the precaution of not losing memory in the execution process. 
