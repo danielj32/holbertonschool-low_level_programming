@@ -7,29 +7,25 @@
 
 char *_strdup(char *str)
 {
-        int n, l;
-        char *pt;
+	int n, l;
+	char *pt;
 
-        if (str == NULL)
-                return (NULL);
-
-        for (n = 0; str[n];  n++)
-        {
-
-        }
-        n++;
-        pt = malloc(sizeof(char) * n);
-
-        if (pt == NULL)
-       	{
+	if (str == NULL)
+		return (NULL);
+	for (n = 0; str[n];  n++)
+		;
+	n++;
+	pt = malloc(sizeof(char) * n);
+	if (pt == NULL)
+	{
 		free(pt);
-                return (NULL);
+		return (NULL);
 	}
-        for (l = 0; l <  n; l++)
-        {
-                pt[l] = str[l];
-        }
-        return (pt);
+	for (l = 0; l <  n; l++)
+	{
+		pt[l] = str[l];
+	}
+	return (pt);
 }
 
 /**
@@ -52,7 +48,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!own)
 	{
 		free(nam);
-		return(NULL);
+		return (NULL);
 	}
 	new_dog = malloc(sizeof(dog_t));
 	if (!new_dog)
