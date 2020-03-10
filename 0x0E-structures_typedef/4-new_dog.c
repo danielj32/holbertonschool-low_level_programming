@@ -4,6 +4,7 @@
  *@str: string pointer
  *Return: pt
  */
+
 char *_strdup(char *str)
 {
         int n, l;
@@ -20,8 +21,10 @@ char *_strdup(char *str)
         pt = malloc(sizeof(char) * n);
 
         if (pt == NULL)
+       	{
+		free(pt);
                 return (NULL);
-
+	}
         for (l = 0; l <  n; l++)
         {
                 pt[l] = str[l];
@@ -48,17 +51,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	own = _strdup(owner);
 	if (!own)
-	{
-		free(nam);
 		return(NULL);
-	}
 	new_dog = malloc(sizeof(dog_t));
 	if (!new_dog)
-	{
-		free(nam);
-		free(own);
 		return (NULL);
-	}
 	new_dog->name = nam;
 	new_dog->age = age;
 	new_dog->owner = own;
