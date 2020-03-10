@@ -29,7 +29,6 @@ char *_strdup(char *str)
         {
                 pt[l] = str[l];
         }
-	pt[l] = '\n';
         return (pt);
 }
 
