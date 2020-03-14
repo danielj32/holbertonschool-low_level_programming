@@ -12,7 +12,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *pt;
 
 	if (separator == NULL)
-		return;
+		return (NULL);
 
 	va_start(strings, n);
 
