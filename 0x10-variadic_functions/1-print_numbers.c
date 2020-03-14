@@ -11,7 +11,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int j;
 
 	if (separator == NULL)
-		return;
+		separator = "";
 
 	va_start(listl, n);
 
