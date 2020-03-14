@@ -1,7 +1,7 @@
 global main
 
 	section .text
-main:	
+main:
 	  mov rax, 1        	; write(
 	  mov rdi, 1        	;   STDOUT_FILENO,
 	  mov rsi, msg      	;   "Hello, world!\n",
