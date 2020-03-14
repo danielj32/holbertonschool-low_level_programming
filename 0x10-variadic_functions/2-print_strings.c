@@ -1,8 +1,8 @@
 #include "variadic_functions.h"
 /**
  *print_strings - print a string
- *@separator: ,
- *@n: integer
+ *@separator: is a ,
+ *@n: num of elements
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
