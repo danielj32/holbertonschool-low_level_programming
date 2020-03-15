@@ -1,16 +1,16 @@
-global main
+section .data
+	    msg db "Hello, Holberton",10 ; 10 is the ASCII code for a new line (LF)
 
 	section .text
+	    global main
+
 main:
-	  mov rax, 1        	; write(
-	  mov rdi, 1        	;   STDOUT_FILENO,
-	  mov rsi, msg      	;   "Hello, world!\n",
-	  mov rdx, 17 	;   sizeof("Hello, world!\n")
-	  syscall           	; );
+	    mov rax, 1
+	    mov rdi, 1
+	    mov rsi, msg
+	    mov rdx, 17
+	    syscall
 
-	  mov rax, 60       	; exit(
-	  mov rdi, rdi        	;   EXIT_SUCCESS
-	  syscall           	; );
-
-	section .data
-msg:	 db "Hello, Holberton", 10
+	    mov rax, 60
+	    mov rdi, 0
+	    syscall
