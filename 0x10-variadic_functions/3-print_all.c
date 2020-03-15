@@ -7,7 +7,7 @@ void print_all(const char * const format, ...)
 {
 	int l, k;
 	va_list lista;
-
+	char *com = "";
 	print print_name[] =
 
 	{
@@ -20,16 +20,16 @@ void print_all(const char * const format, ...)
 
 	va_start(lista, format);
 	l = 0;
-	while (format[l])
+	while (format && format[l])
 	{
 		k = 0;
 		while (print_name[k].pt)
 		{
 			if (*(print_name[k].st) == format[l])
 			{
+				printf("%s", com);
 				(*print_name[k].pt)(lista);
-				if (format[l + 1] != '\0')
-					printf(", ");
+				com = ", ";
 			}
 			k++;
 		}
@@ -72,6 +72,12 @@ void flotante(va_list lista)
 
 void string(va_list lista)
 {
-	printf("%s", va_arg(lista, char *));
+	char *point;
+
+	point =  va_arg(lista, char *);
+	if (!point)
+		point = "(nil)";
+
+	printf("%s", point);
 }
 
