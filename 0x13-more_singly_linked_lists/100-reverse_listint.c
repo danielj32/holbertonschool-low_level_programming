@@ -2,23 +2,22 @@
 /**
  * reverse_listint - reverse a linked list.
  *@head: first node
- * Return: actual.
+ * Return: head.
  */
 
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *before = NULL;
-	listint_t *actual = *head;
-	listint_t *next = NULL;
+	listint_t *actual = NULL;
 
-	while (actual != NULL)
+	while (*head)
 	{
-		next = actual->next;
-		actual->next = before;
-		before = actual;
-		actual = next;
+		before = *head;
+		*head = (*head)->next;
+		before->next = actual;
+		actual = before;
 	}
 
-	*head = before;
-	return (actual);
+	*head = actual;
+	return (*head);
 }
