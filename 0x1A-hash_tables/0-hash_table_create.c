@@ -23,8 +23,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (new_hash->array == NULL)
 		return (NULL);
 
-	memset(new_hash, 0, size * sizeof(hash_node_t));
-
 	new_hash->size = size;
 
 	return (new_hash);
