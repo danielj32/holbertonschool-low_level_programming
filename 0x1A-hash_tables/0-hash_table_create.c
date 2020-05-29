@@ -1,12 +1,16 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "hash_tables.h"
 /**
  * hash_table_create - check the code for Holberton School students.
  *@size: is the size for hash table
  * Return: Always EXIT_SUCCESS.
  */
+
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *new_hash = NULL;
+	hash_table_t *new_hash;
 
 	if (size < 1)
 		return (NULL);
