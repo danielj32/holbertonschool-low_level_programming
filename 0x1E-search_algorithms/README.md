@@ -1,0 +1,1 @@
+This directory contents information about Search Algorithms in C.
