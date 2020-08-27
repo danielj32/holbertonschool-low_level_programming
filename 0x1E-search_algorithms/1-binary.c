@@ -28,18 +28,21 @@ void print_my_array(int *array, int low, int maxim)
 
 int binary_search(int *array, size_t size, int value)
 {
-	int idx = 0;
-	int *array_ed = (array + size - 1);
+	int low = 0;
+	int max = (int)size - 1;
+	int mid = 0;
 
-	while (array <= array_ed && *array != value)
+	while (low <= max)
 	{
 		printf("Searching in array: ");
-		print_my_array(array, idx, *array_ed);
-		array++;
-		idx++;
+		print_my_array(array, low, max);
+		mid = (low + max) / 2;
+		if (array[mid] < value)
+			low = mid + 1;
+		else if (array[mid] > value)
+			max = mid - 1;
+		else
+			return (mid);
 	}
-
-	if (array <= array_ed)
-		return (idx);
 	return (-1);
 }
